@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of Java based Calculator
+  hosts: all
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: shreyankb/devops-calculator
+        source: pull
