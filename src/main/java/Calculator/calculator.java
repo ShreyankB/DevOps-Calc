@@ -7,39 +7,39 @@ import org.apache.logging.log4j.Logger;
 
 public class calculator {
     private static final Logger logger = LogManager.getLogger(calculator.class);
-    public double sqrt(double value){
+    public double square_root(double value){
         logger.info("[Square_Root] - "+value);
         double result = Math.sqrt(value);
-        logger.info("[Square_Root-Result] - "+result);
+        logger.info("[Square_Root-Answer] - "+result);
         return result;
     }
 
     public long factorial(int value){
         logger.info("[Factorial] - "+value);
-        int tp = value;
+        int temp = value;
         long ans=1;
-        while (tp>0){
-            ans*=tp;
-            tp--;
+        while (temp>0) {
+            ans *= temp;
+            temp--;
         }
-        logger.info("[Factorial-Result] - "+ans);
+        logger.info("[Factorial-Answer] - "+ans);
         return ans;
     }
 
-    public double natural_log(double value){
+    public double logarithm(double value){
         logger.info("[Log] - "+value);
         double result = Math.log(value);
-        logger.info("[Log-Result] - "+result);
+        logger.info("[Log-Answer] - "+result);
         return result;
     }
 
-    public double power(double value, int p){
-        logger.info("[Power] - [Base] - "+value+" [Exponent] - "+p);
+    public double power(double base, int exp){
+        logger.info("[Power - Base] - "+base+" [Exponent] - "+exp);
         double ans=1;
-        for(int i=1;i<=p;i++){
-            ans*=value;
+        for(int i=1;i<=exp;i++){
+            ans*=base;
         }
-        logger.info("[Power-Result] - "+ans);
+        logger.info("[Power-Answer] - "+ans);
         return ans;
     }
 
@@ -66,7 +66,7 @@ public class calculator {
                 case 1:
                     System.out.println("Value: ");
                     double one = sc.nextDouble();
-                    System.out.println("Answer is "+cal.sqrt(one));
+                    System.out.println("Answer is "+cal.square_root(one));
                     break;
 
                 case 2:
@@ -78,7 +78,7 @@ public class calculator {
                 case 3:
                     System.out.println("Value: ");
                     double three = sc.nextDouble();
-                    System.out.println("Answer is "+cal.natural_log(three));
+                    System.out.println("Answer is "+cal.logarithm(three));
                     break;
 
                 case 4:
