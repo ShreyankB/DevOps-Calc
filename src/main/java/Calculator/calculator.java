@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.lang.Math;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+// comment
 public class calculator {
     private static final Logger logger = LogManager.getLogger(calculator.class);
     public double square_root(double value){
